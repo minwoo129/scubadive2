@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddLogActivity"
+    android:orientation="vertical">
+    
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarSize="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="로그번호"
+                        android:gravity="center" />
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="로그 NO."
+                        android:gravity="bottom|right"
+                        android:layout_toRightOf="@+id/tv"
+                        android:layout_marginLeft="30dp"/>
+
+                    <TextView
+                        android:id="@+id/logNoTv"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/tv1"
+                        android:gravity="center"
+                        android:textSize="20sp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="입수날짜/ 시간"
+                        android:gravity="center"/>
+                    <Button
+                        android:id="@+id/dateBt"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="날짜"
+                        android:layout_toRightOf="@+id/tv2"/>
+                    <Button
+                        android:id="@+id/timeBt"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="시간"
+                        android:layout_toRightOf="@+id/dateBt"/>
+                    <TextView
+                        android:id="@+id/dateTv"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:text="2xxx-xx-xx"
+                        android:layout_toRightOf="@+id/timeBt"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/timeTv"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="xx:xx"
+                        android:gravity="center"
+                        android:layout_toRightOf="@+id/dateTv"/>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:text="다이빙 목적"
+                        android:gravity="center"/>
+
+                    <RadioGroup
+                        android:id="@+id/diveTypeRg"
+                        android:layout_width="350dp"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/fundiveRb"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="펀다이빙"/>
+                        <RadioButton
+                            android:id="@+id/edudiveRb"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:text="교육"/>
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/purposeTv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="다이빙 목적"
+                android:gravity="center"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="30dp"
+                        android:text="날씨"
+                        android:textSize="16sp"
+                        android:gravity="center"/>
+
+                    <RadioGroup
+                        android:id="@+id/weatherRg"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal"
+                        >
+
+                        <RadioButton
+                            android:id="@+id/weatherRb1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="맑음"/>
+                        <RadioButton
+                            android:id="@+id/weatherRb2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="흐림"/>
+                        <RadioButton
+                            android:id="@+id/weatherRb3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="비"/>
+                        <RadioButton
+                            android:id="@+id/weatherRb4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="눈"/>
+
+                    </RadioGroup>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    >
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="위치"
+                        android:gravity="center"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/locationEt"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:hint="위치(리조트 등)"
+                        android:textSize="16dp"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:text="포인트"
+                        android:gravity="center"
+                        android:textSize="16sp"/>
+
+                    <EditText
+                        android:id="@+id/pointEt"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:hint="다이빙 포인트"
+                        android:text=""
+                        android:textSize="16dp"/>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="상세좌표찾기"
+                        android:gravity="center"/>
+                    <Button
+                        android:id="@+id/mapBt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="좌표 입력" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+                    <TextView
+                        android:id="@+id/lettTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="위도"
+                        android:gravity="center"/>
+                    <TextView
+                        android:id="@+id/longTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="경도"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="버디"
+                        android:gravity="center"
+                        />
+
+                    <EditText
+                        android:id="@+id/buddyEt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:hint="버디 이름"
+                        android:text=""
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="다이브 마스터"
+                        android:gravity="center"
+                        />
+                    <EditText
+                        android:id="@+id/diveMasterEt"
+                        android:layout_width="130dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:hint="다이브 마스터"
+                        android:text=""/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="잠수시간"
+                        android:gravity="center"/>
+                    <EditText
+                        android:id="@+id/diveTimeEt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:hint="단위 : 분"/>
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="최대잠수수심"
+                        android:gravity="center"/>
+                    <EditText
+                        android:id="@+id/maxDepthEt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:hint="단위 : m"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="시야"
+                        android:gravity="center"/>
+                    <EditText
+                        android:id="@+id/sawLengthEt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:hint="단위: m"/>
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:text="수온"
+                        android:gravity="center"/>
+                    <EditText
+                        android:id="@+id/waterTempEt"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:hint="단위: 섭씨"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="강사"/>
+                    <EditText
+                        android:id="@+id/instructorEt"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:hint="강사명"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:text="탱크 종류"
+                        android:gravity="center"/>
+
+                    <RadioGroup
+                        android:id="@+id/tankRg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/tankRb1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="알루미늄"/>
+                        <RadioButton
+                            android:id="@+id/tankRb2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="스틸"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:text="가스 종류"
+                        android:gravity="center"/>
+
+                    <RadioGroup
+                        android:id="@+id/gasRg"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/gasRb1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="에어"/>
+                        <RadioButton
+                            android:id="@+id/gasRb2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="나이트록스"/>
+                        <RadioButton
+                            android:id="@+id/gasRb3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="기타"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+
+
+                <EditText
+                    android:id="@+id/gasBeyondTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="16sp"
+                    android:hint="가스종류 기타"
+                    android:gravity="center"
+                    android:visibility="invisible"/>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:text="슈트"
+                        android:gravity="center"/>
+                    <Button
+                        android:id="@+id/suitBt"
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:text="슈트 선택"/>
+                    <TextView
+                        android:id="@+id/suitTv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="슈트 선택"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:text="웨이트(벨트)"
+                        android:gravity="center"/>
+
+                    <EditText
+                        android:id="@+id/weightEt1"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:hint="단위:lb"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:text="lb"
+                        android:gravity="center"/>
+                    <EditText
+                        android:id="@+id/weightEt2"
+                        android:layout_width="70dp"
+                        android:layout_height="match_parent"
+                        android:hint="단위:kg"
+                        android:text=""/>
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:textSize="16sp"
+                        android:text="kg"
+                        android:gravity="center"/>
+                    <Button
+                        android:id="@+id/weightEnterBt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="입력"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:text="공기\n잔압"
+                        android:gravity="center"/>
+
+
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:text="입수 시"
+                                android:gravity="center"/>
+                            <EditText
+                                android:id="@+id/beforeGasLeftEt1"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:textSize="16sp"
+                                android:hint="단위: bar"
+                                android:text=""/>
+                            <TextView
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:text="bar"
+                                android:gravity="center"/>
+                            <EditText
+                                android:id="@+id/beforeGasLeftEt2"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:textSize="16sp"
+                                android:hint="단위: psi"
+                                android:text=""/>
+                            <TextView
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:text="psi"
+                                android:gravity="center"/>
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:layout_width="50dp"
+                                android:layout_height="match_parent"
+                                android:text="출수 시"
+                                android:gravity="center"/>
+                            <EditText
+                                android:id="@+id/afterGasLeftEt1"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:textSize="16sp"
+                                android:hint="단위: bar"
+                                android:text=""/>
+                            <TextView
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:text="bar"
+                                android:gravity="center"/>
+                            <EditText
+                                android:id="@+id/afterGasLeftEt2"
+                                android:layout_width="80dp"
+                                android:layout_height="match_parent"
+                                android:textSize="16sp"
+                                android:hint="단위: psi"
+                                android:text=""/>
+                            <TextView
+                                android:layout_width="30dp"
+                                android:layout_height="match_parent"
+                                android:text="psi"
+                                android:gravity="center"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/airEnterBt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="입력"/>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/memoEt"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:hint="메모할 내용을 입력해주세요"
+                android:text=""/>
+            <Button
+                android:id="@+id/addBt"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="100dp"
+                android:text="저장하기" />
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

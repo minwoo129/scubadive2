@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/licBelongTv"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="날짜"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/licCodeTv"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:text="시간"
+        android:layout_toRightOf="@+id/licBelongTv"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/licNoTv"
+        android:layout_width="210dp"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@+id/licCodeTv"
+        android:text="다이빙 포인트"
+        android:gravity="center"/>
+
+</RelativeLayout>
